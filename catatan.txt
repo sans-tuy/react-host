@@ -1,0 +1,22 @@
+npm install -g create-react-app  //untuk menginstall react
+create-react-app 'nama-project' //untuk membuat project baru
+npm start // untuk memulai program
+npm run build // untuk mengcompile react menjadi folder siap deploy ke server 
+
+## hosting react ke github pages
+install GH pages modul:
+	npm i gh-pages --save-dev
+in package.json:
+	add new:
+	"homepage" : "http://{username}.github.io/{repoName}"
+
+	update scripts section:
+	"predeploy" : "npm run build",
+	"deploy" : "gh-pages -d build"
+setup git: 
+	(bikin repo baru)
+	git init
+	git remote add origin URL
+
+deploy:
+	npm run deploy
